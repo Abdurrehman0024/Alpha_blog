@@ -1,5 +1,13 @@
 <div id="page-content">
   <h1 class="text-center mt-4">Listing all articles</h1>
-  <%= render 'article' %>
+  <div class="flickr_pagination">
+  <%= will_paginate @articles, :container => false %>
+</div>
+<%= render 'article' %>
+<footer id="sticky-footer" class="py-4 bg-dark text-white">
+  <div class="container text-center">
+    <small>Copyright &copy; Your Website</small>
+  </div>
+</footer>
 
 
