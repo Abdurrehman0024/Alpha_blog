@@ -7,5 +7,7 @@ get 'about', to: 'pages#about'
 resources :articles
 get "signup", to:"users#new"
 resources :users , except: [:new]
-
+get 'login', to:'sessions#new'
+get 'login', to:'sessions#create'
+get 'login', to:'sessions#destroy'
 end
