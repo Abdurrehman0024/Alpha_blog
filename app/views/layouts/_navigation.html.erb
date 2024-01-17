@@ -15,6 +15,12 @@
       <li class="nav-item active">
         <%= link_to "Create a new article", new_article_path, class:"nav-link"%>
       </li>
+      <li class="nav-item">
+        <%= link_to "Log in", login_path, class:"nav-link"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Log out", logout_path, class:"nav-link", method: :delete %>
+      </li>
         </div>
       </li>
     </ul>
