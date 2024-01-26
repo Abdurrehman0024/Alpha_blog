@@ -30,8 +30,10 @@
       <% end %>
     </div>
     <div class="mb-3">
+    <% if logged_in? %>
       <%= link_to '[ Cancel and return to articles listing ]', articles_path, class: "text-info" %>
     </div>
+    <% end%>
   </div>
 </div> 
 
