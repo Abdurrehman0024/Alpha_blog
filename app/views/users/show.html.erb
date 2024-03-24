@@ -1,4 +1,4 @@
-<h1 class="text-center mt-4"> <%=@user.username %>'s profile</h1>
+<h1 class="text-center mt-4"><strong><%= @user.username %></strong>'s profile</h1>
 <%= gravatar_for @user, size: 200 %>
 
 <% if logged_in? && (@user == current_user|| current_user.admin?) %>
@@ -6,7 +6,7 @@
   <%= link_to "Edit your profile", edit_user_path(@user), class: "btn btn-outline-info" %>
 </div>
 <% end %>
-<h1 class="text-center mt-4"> Articles </h1>
+<h1 class="text-center mt-4"> <strong>Articles</strong> </h1>
 <div class="flickr_pagination">
   <%= will_paginate @articles, :container => false %>
 </div>
@@ -17,3 +17,8 @@
 <div class="flickr_pagination mb-4">
   <%= will_paginate @articles, :container => false %>
 </div>
+<footer id="sticky-footer" class="py-4 bg-dark text-white mt-5">
+  <div class="container text-center">
+    <small>Copyright &copy; Abdur Rehman</small>
+  </div>
+</footer>
